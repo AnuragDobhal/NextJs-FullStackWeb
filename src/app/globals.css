@@ -3,6 +3,7 @@
 *::before,
 *::after {
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 html {
@@ -28,6 +29,7 @@ li,
 blockquote {
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 
