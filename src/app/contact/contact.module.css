@@ -4,14 +4,14 @@
 
 /* Center container */
 .container {
-  padding: 0 6rem;
+  padding: 0 1.5rem; /* Adjusted padding for smaller screens */
   margin: 0 auto;
   text-align: center;
 }
 
 .container h2 {
-  margin-top: 3.2rem;
-  font-size: 4.2rem;
+  margin-top: 2rem; /* Adjusted margin for smaller screens */
+  font-size: 3rem; /* Adjusted font size for smaller screens */
   position: relative;
   display: inline-block;
   cursor: pointer;
@@ -29,25 +29,20 @@
   transition: background-color 0.3s ease, width 0.3s ease-out;
 }
 
-/* .container h2:hover {
-  color: #ff9900; 
-} */
-
 .container h2:hover::after {
-  background-color: #e50f1a; 
-  width: 110%; 
+  background-color: #e50f1a;
+  width: 110%;
 }
-
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 5rem;
-  margin: 6rem auto;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Adjusted grid layout for better responsiveness */
+  gap: 2rem; /* Adjusted gap for smaller screens */
+  margin: 3rem auto; /* Adjusted margin for smaller screens */
 }
 
 .grid_card {
-  padding: 2rem 4rem;
+  padding: 2rem;
   text-align: center;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   background-color: #fff;
@@ -61,7 +56,7 @@
 }
 
 .grid_card h2 {
-  font-size: 1.8rem;
+  font-size: 1.6rem; /* Adjusted font size for smaller screens */
   margin-bottom: 1rem;
 }
 
@@ -70,15 +65,15 @@
 }
 
 .grid_card p:last-child {
-  margin-bottom: 3.2rem;
+  margin-bottom: 2rem; /* Adjusted margin for smaller screens */
 }
 
 .grid_card .last_para {
-  margin-bottom: 3.2rem;
+  margin-bottom: 2rem; /* Adjusted margin for smaller screens */
 }
 
 .grid_card i {
-  font-size: 4.2rem;
+  font-size: 3rem; /* Adjusted font size for smaller screens */
   color: #e50f1a;
 }
 
@@ -103,6 +98,7 @@
   color: #e50914;
   transition: color 0.3s ease;
 }
+
 
 /* Contact Section */
 .contact_section {

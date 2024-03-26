@@ -1,6 +1,5 @@
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: 100%; /* Adjusted for responsiveness */
   padding: 20px;
   text-align: center;
   background: linear-gradient(
@@ -13,7 +12,7 @@
 
 .heading {
   margin-top: 3.2rem;
-  font-size: 4.2rem;
+  font-size: 3.2rem;
   position: relative;
   display: inline-block;
   cursor: pointer;
@@ -39,8 +38,8 @@
 
 .services {
   display: flex;
-  justify-content: space-around;
   flex-wrap: wrap;
+  justify-content: center; /* Center services horizontally */
 }
 
 .card {
@@ -48,15 +47,12 @@
   border-radius: 10px;
   padding: 20px;
   margin: 20px;
-  width: 300px;
-  height: 400px;
+  width: calc(100% - 40px); /* Adjusted width for smaller screens */
+  max-width: 300px; /* Limit width for larger screens */
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s, box-shadow 0.3s;
   position: relative;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 .card:hover {
@@ -66,8 +62,8 @@
 
 .card h3 {
   margin-top: 20px;
-  margin-bottom: 20px;
-  font-size: 1.5rem;
+  margin-bottom: 10px; /* Adjusted margin */
+  font-size: 1.2rem; /* Adjusted font size */
   color: #333;
 }
 
@@ -88,22 +84,33 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 50px;
-  height: 100px;
+  height: 80px; /* Adjusted height */
 }
 
 .icon {
-  margin: auto;
-  font-size: 5rem;
+  font-size: 4rem; /* Adjusted font size */
   color: #ff0037;
 }
 
-/* .learnMoreButton {
-  background-color: #1e1e1f;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-} */
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  .heading {
+    /* font-size: 2.5rem; */
+  }
+
+  .card {
+    width: calc(50% - 40px); /* Adjusted width for smaller screens */
+    max-width: none; /* Remove max-width */
+  }
+
+  .iconWrapper {
+    height: 60px; /* Adjusted height */
+  }
+
+  .icon {
+    font-size: 3rem; /* Adjusted font size */
+  }
+}
