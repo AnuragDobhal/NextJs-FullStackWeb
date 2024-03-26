@@ -1,0 +1,81 @@
+
+.heading {
+    text-align: center;
+    font-size: 4.2rem;
+    position: relative;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    margin-top: 10.2rem;
+    font-size: 4.2rem;
+    transition: color 0.3s ease;
+  }
+  
+  .heading::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: #ff0037;
+    transition: width 0.3s ease;
+  }
+  
+  @media (max-width: 768px) {
+    .heading:hover::after {
+      width: 20%;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .heading:hover::after {
+      width: 10%; 
+    }
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust column width as needed */
+    gap: 20px; 
+    justify-content: center; 
+    align-items: center; 
+    padding-left: 5%;
+    padding-right: 5%; 
+    margin-bottom: 5rem;;
+  }
+  
+
+  .item {
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    font-size: 16px; 
+    text-align: center;
+    box-sizing: border-box;
+  }
+  
+  .item img {
+    width: 100%;
+    height: auto; 
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: 8px; 
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .item img:hover {
+    transform: scale(1.05);
+  }
+
+  @media (max-width: 768px) {
+    .grid {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust column width for smaller screens */
+      gap: 10px;
+      padding-left: 2%;
+      padding-right: 2%; 
+    }
+  }
+  

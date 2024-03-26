@@ -1,0 +1,35 @@
+.searchContainer {
+    display: flex;
+    position: relative;
+}
+
+.searchIcon {
+    cursor: pointer;
+    padding: 10px;
+    background-color: #f0f0f0; 
+    border: 1px solid #ccc;
+    border-right: none; 
+    border-radius: 5px;
+    transition: background-color 0.3s ease; 
+    box-shadow: 1px 1px 4px #c7c7c7, -1px -1px 4px #ffffff; 
+}
+
+.searchIcon:hover {
+    background-color: #e0e0e0; 
+}
+
+.searchInput {
+    flex: 1; 
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-left: none; 
+    border-radius: 5px; 
+    transition: width 0.3s ease-in-out, box-shadow 0.3s ease; /* Smooth width and box-shadow transition */
+    box-shadow: inset 1px 1px 4px #c7c7c7, inset -1px -1px 4px #ffffff; /* Neumorphism inset shadow */
+    overflow: hidden;
+}
+
+.searchInput:focus {
+    width: 200px; 
+    box-shadow: inset 3px 3px 8px #c7c7c7, inset -3px -3px 8px #ffffff, 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow on focus */
+}
