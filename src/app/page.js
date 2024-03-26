@@ -10,7 +10,7 @@ const Page = () => {
   return (
     <>
       <Herosection
-        title={"LET'S WATCH MOVIE TOGETHER"}
+        title={"LET'S WATCH MOVIES"}
         imageUrl={"/home.svg"}/>
       <ServicesSection />
       <OurClients/>
