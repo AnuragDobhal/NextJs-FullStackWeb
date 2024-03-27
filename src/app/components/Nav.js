@@ -1,18 +1,36 @@
 'use client'
 
 import styles from "@/app/styles/navbar.module.css"
-import {CgMenu} from "react-icons/cg";
+import { CgMenu } from "react-icons/cg";
 import { IoCloseOutline } from "react-icons/io5";
 import Link from "next/link";
-import {useState} from "react";
+import { useState, useEffect, useRef } from "react";
 
 const Nav = () => {
     const [openMenu, setOpenMenu] = useState(false);
-    console.log("value " + openMenu)
+    const navRef = useRef(null);
+
+    useEffect(() => {
+        // Function to close the navbar when clicking outside of it
+        function handleClickOutside(event) {
+            if (navRef.current && !navRef.current.contains(event.target)) {
+                setOpenMenu(false);
+            }
+        }
+
+        // Add event listener when the component mounts
+        document.addEventListener('mousedown', handleClickOutside);
+
+        // Remove event listener when the component unmounts
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, []);
+
     return (
         <>
-            <nav className={styles.navbar}>
-                <div className={openMenu ? `${styles.active}` : "" }>
+            <nav ref={navRef} className={styles.navbar}>
+                <div className={openMenu ? `${styles.active}` : ""}>
                     <ul className={styles.navbarList}>
                         <li className={styles.navbarItem}>
                             <Link className={styles.navbarLink} href="/"
@@ -28,6 +46,11 @@ const Nav = () => {
                             <Link className={styles.navbarLink}
                                   onClick={() => setOpenMenu(false)}
                                   href="/movie">Movie</Link>
+                        </li>
+                        <li className={styles.navbarItem}>
+                            <Link className={styles.navbarLink}
+                                  onClick={() => setOpenMenu(false)}
+                                  href="/news">News</Link>
                         </li>
                         <li className={styles.navbarItem}>
                             <Link className={styles.navbarLink}
@@ -51,9 +74,7 @@ const Nav = () => {
                     </div>
                 </div>
             </nav>
-
         </>
-
     );
 };
 

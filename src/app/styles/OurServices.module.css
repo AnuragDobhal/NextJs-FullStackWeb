@@ -43,8 +43,8 @@
   border-radius: 10px;
   padding: 20px;
   margin: 20px;
-  width: calc(50% - 40px); /* Adjusted width for smaller screens */
-  max-width: 300px; /* Limit width for larger screens */
+  width: calc(50% - 40px); 
+  max-width: 300px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s, box-shadow 0.3s;
   position: relative;

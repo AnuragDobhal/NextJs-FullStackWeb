@@ -29,7 +29,7 @@ const ServiceHero = () => {
                 height={500}
               />
               <figcaption>
-                <h3>Billions upon billions</h3>
+                <h3>Software Development</h3>
               </figcaption>
             </figure>
             <p>
@@ -50,7 +50,7 @@ const ServiceHero = () => {
                 height={500}
               />
               <figcaption>
-                <h3>Drake Equation</h3>
+                <h3>Salseforce/Consultancy</h3>
               </figcaption>
             </figure>
             <p>
@@ -71,7 +71,7 @@ const ServiceHero = () => {
                 height={500}
               />
               <figcaption>
-                <h3>Vast cosmic arena</h3>
+                <h3>Finiance Sloutions</h3>
               </figcaption>
             </figure>
             <p>
