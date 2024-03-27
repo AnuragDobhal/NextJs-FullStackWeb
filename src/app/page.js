@@ -3,6 +3,7 @@ import Herosection from "@/app/components/Herosection";
 import Contact from "./contact/page";
 import ServicesSection from "./components/OurServicesSection";
 import OurClients from "./components/OurClients";
+import './globals.css'
 
 // import Slider from "./components/GalleryFiles";
 // import { SliderData } from './components/SliderData';
@@ -14,10 +15,9 @@ const Page = () => {
         title={"LET'S WATCH MOVIES"}
         imageUrl={"/home.svg"}
         />
-        
-      <ServicesSection />
+      <ServicesSection/>
       <OurClients/>
-      <Contact />
+      <Contact/>
       {/* <BasicSpeedDial/> */}
     </>
   );
