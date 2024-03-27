@@ -3,18 +3,14 @@
 *::before,
 *::after {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 html {
     font-size: 62.5%;
     overflow-x: hidden;
     scroll-behavior: smooth;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  width: calc(100vw - 16px);
-  height: calc(100vh - 16px);
-
 }
 
 /* Remove default margin and padding */
@@ -34,7 +30,6 @@ blockquote {
     margin: 0;
     padding: 0;
 }
-
 
 /* Add border box to images */
 img {
