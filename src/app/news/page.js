@@ -24,8 +24,7 @@ export default async function ProductServer() {
           <div className={styles.card} key={index}>
             <h2 className={styles.author}>Author: {item.author}</h2>
             <h3 className={styles.title}>Title: {item.title}</h3>
-            <h4 className={styles.title}>published at: {item.publishedAt}</h4>
-            <p className={styles.para}>Description: {item.content}</p>
+            <p className={styles.para}>Description: {item.description}</p>
           </div>
         ))}
       </div>
