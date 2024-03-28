@@ -1,6 +1,6 @@
-// import Image from "next/image";
-
+import Image from "next/image";
 import styles from "@/app/styles/news.module.css";
+
 
 async function productlistserver() {
   await new Promise((resolve) => setTimeout(resolve, 2000));
@@ -24,7 +24,15 @@ export default async function ProductServer() {
           <div className={styles.card} key={index}>
             <h2 className={styles.author}>Author: {item.author}</h2>
             <h3 className={styles.title}>Title: {item.title}</h3>
-            <p className={styles.para}>Description: {item.description}</p>
+            <h4 className={styles.title}>published at: {item.publishedAt}</h4>
+            {/* <Image
+            src={item.url}
+            alt={item.title}
+            width={600}
+            height={300}
+          /> */}
+
+            <p className={styles.para}>Description: {item.content}</p>
           </div>
         ))}
       </div>
