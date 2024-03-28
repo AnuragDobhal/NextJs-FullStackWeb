@@ -29,14 +29,16 @@ const ServiceHero = () => {
                 height={500}
               />
               <figcaption>
-                <h3>Current News</h3>
+                <h3>Software Development</h3>
               </figcaption>
             </figure>
             <p>
-            Breaking: Global leaders convene for emergency summit amidst rising tensions.Global markets surge as investors embrace optimism amid economic recovery hopes,Stay informed with our real-time updates on the latest developments worldwide.
+              Made in the interiors of collapsing stars star stuff harvesting
+              star light venture billions upon billions Drake Equation brain is
+              the seed of intelligence?
             </p>
-            <Link className={styles.visit} href="/news">
-              View News
+            <Link className={styles.visit} href="#">
+              View Article
             </Link>
           </li>
           <li>
@@ -48,14 +50,16 @@ const ServiceHero = () => {
                 height={500}
               />
               <figcaption>
-                <h3>Movie Reviews</h3>
+                <h3>Salseforce/Consultancy</h3>
               </figcaption>
             </figure>
             <p>
-            From award-winning dramas to blockbuster action movies, we've got you covered. Browse our selection of the latest and greatest movies, and find your new favorite today.
+              Another world citizens of distant epochs from which we spring
+              descended from astronomers Orion's sword shores of the cosmic
+              ocean.
             </p>
-            <Link className={styles.visit} href="/movie">
-              View Movies
+            <Link className={styles.visit} href="#">
+              View Article
             </Link>
           </li>
           <li>
@@ -71,7 +75,9 @@ const ServiceHero = () => {
               </figcaption>
             </figure>
             <p>
-            We offers a wide array of Finiancial solution services to augment, develop, manage, and better maintain your business at reasonable cost.
+              Galaxies the ash of stellar alchemy prime number science
+              inconspicuous motes of rock and gas brain is the seed of
+              intelligence.
             </p>
             <Link className={styles.visit} href="#">
               View Article
