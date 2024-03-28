@@ -1,4 +1,4 @@
-import Image from "next/image";
+
 import styles from "@/app/styles/news.module.css";
 
 
@@ -25,12 +25,7 @@ export default async function ProductServer() {
             <h2 className={styles.author}>Author: {item.author}</h2>
             <h3 className={styles.title}>Title: {item.title}</h3>
             <h4 className={styles.title}>published at: {item.publishedAt}</h4>
-            {/* <Image
-            src={item.url}
-            alt={item.title}
-            width={600}
-            height={300}
-          /> */}
+         
 
             <p className={styles.para}>Description: {item.content}</p>
           </div>
