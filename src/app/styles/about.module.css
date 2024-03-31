@@ -31,7 +31,7 @@
   width: 0;
   height: 2px;
   border-radius: 5px;
-  background-color: #ea0606;
+  background-color: #e90606;
   transition: width 0.5s ease;
 }
 
@@ -57,7 +57,7 @@
   max-width: 300px; 
   animation: fadeIn 1s forwards;
   clip-path: polygon(0 15%, 25% 0, 50% 15%, 75% 0, 100% 15%, 100% 100%, 0 100%);
-  border: 2px solid #ff0037; 
+  border: 2px solid #fc0339; 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
   padding: 20px; 
   background-color: #f8f8f8; 
