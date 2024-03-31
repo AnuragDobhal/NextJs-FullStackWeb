@@ -1,4 +1,4 @@
-"use client";
+"use client"
 import React, { useState, useEffect } from "react";
 import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend } from "recharts";
 import TextField from "@material-ui/core/TextField";
@@ -14,6 +14,7 @@ async function covidcaselistserver() {
 export default function ProductServer() {
   const [covidData, setCovidData] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
+  const [chartWidth, setChartWidth] = useState(0);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -21,6 +22,16 @@ export default function ProductServer() {
       setCovidData(data);
     };
     fetchData();
+
+    // Set chart width on mount
+    setChartWidth(window.innerWidth * 0.9);
+
+    // Update chart width on window resize
+    const handleResize = () => {
+      setChartWidth(window.innerWidth * 0.9);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   const handleChange = (e) => {
@@ -47,36 +58,20 @@ export default function ProductServer() {
         />
       </div>
       <div className={covidStyles.chartContainer}>
-      <BarChart
-  width={window.innerWidth * 0.9} // Adjusted to 90% of window width
-  height={300} // Adjusted height
-  data={filteredData}
-  margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
->
-  <XAxis dataKey="country" />
-  <YAxis />
-  <Tooltip />
-  <Bar dataKey="cases" fill="#ffa500" /> {/* Orange for total cases */}
-  <Bar dataKey="deaths" fill="#ff0000" /> {/* Red for death cases */}
-  <Bar dataKey="recovered" fill="#008000" /> {/* Green for recovered cases */}
-</BarChart>
-
-{/* Legend */}
-<div className={covidStyles.legend}>
-  <div className={covidStyles.legendItem}>
-    <div className={covidStyles.legendSquare} style={{ backgroundColor: '#ffa500' }}></div>
-    <span>Cases</span>
-  </div>
-  <div className={covidStyles.legendItem}>
-    <div className={covidStyles.legendSquare} style={{ backgroundColor: '#ff0000' }}></div>
-    <span>Deaths</span>
-  </div>
-  <div className={covidStyles.legendItem}>
-    <div className={covidStyles.legendSquare} style={{ backgroundColor: '#008000' }}></div>
-    <span>Recovered</span>
-  </div>
-</div>
-
+        <BarChart
+          width={chartWidth}
+          height={300} // Adjusted height
+          data={filteredData}
+          margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
+        >
+          <XAxis dataKey="country" />
+          <YAxis />
+          <Tooltip />
+          <Legend />
+          <Bar dataKey="cases" fill="#8884d8" />
+          <Bar dataKey="deaths" fill="#82ca9d" />
+          <Bar dataKey="recovered" fill="#ffc658" />
+        </BarChart>
       </div>
     </div>
   );
