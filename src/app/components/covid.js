@@ -1,4 +1,5 @@
 "use client"
+
 import React, { useState, useEffect } from "react";
 import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend } from "recharts";
 import TextField from "@material-ui/core/TextField";
@@ -67,10 +68,10 @@ export default function ProductServer() {
           <XAxis dataKey="country" />
           <YAxis />
           <Tooltip />
-          <Legend />
-          <Bar dataKey="cases" fill="#8884d8" />
-          <Bar dataKey="deaths" fill="#82ca9d" />
-          <Bar dataKey="recovered" fill="#ffc658" />
+          <Legend formatter={(value) => value.charAt(0).toUpperCase() + value.slice(1)} />
+          <Bar dataKey="cases" fill="#ff7802" />
+          <Bar dataKey="deaths" fill="#ff0037" />
+          <Bar dataKey="recovered" fill="#2b9309" />
         </BarChart>
       </div>
     </div>
