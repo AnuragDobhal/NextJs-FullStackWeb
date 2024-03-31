@@ -24,11 +24,9 @@ export default function ProductServer() {
     };
     fetchData();
 
-    // Set chart width on mount
-    setChartWidth(window.innerWidth * 0.9);
+    setChartWidth(window.innerWidth * 0.9);  //graph size
 
-    // Update chart width on window resize
-    const handleResize = () => {
+    const handleResize = () => {             //graph resize for small screen
       setChartWidth(window.innerWidth * 0.9);
     };
     window.addEventListener("resize", handleResize);

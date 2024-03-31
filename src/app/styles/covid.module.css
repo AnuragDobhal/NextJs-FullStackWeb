@@ -1,6 +1,4 @@
-/* covid.module.css */
 
-/* Container styles */
 .container {
     width: 100%;
     padding: 20px;
@@ -27,44 +25,41 @@
     transform: translateX(-50%);
     width: 50%;
     height: 2px;
-    background-color: #ff0037; /* Change underline color */
+    background-color: #ff0037; 
     transition: width 0.3s ease;
   }
   
   .head:hover::after {
-    width: 80%; /* Adjusted width on hover */
+    width: 80%; 
   }
   
-  /* Search input styles */
   .searchContainer {
     text-align: center;
     margin-bottom: 20px;
   }
   
   .searchInput {
-    width: 300px; /* Adjust width as needed */
+    width: 300px; 
     padding: 10px;
     border: 2px solid #ff0037;
-    border-radius: 20px; /* Rounded corners */
+    border-radius: 20px; 
     font-size: 1rem;
     outline: none;
-    transition: width 0.3s ease; /* Add transition for animation */
+    transition: width 0.3s ease; 
   }
   
-  /* Animation for large screens */
+
   @media (min-width: 769px) {
     .searchInput:hover,
     .searchInput:focus {
-      width: 400px; /* Increase width on hover/focus */
+      width: 400px; 
     }
   }
   
-  /* Chart container styles */
   .chartContainer {
     width: 100%;
   }
   
-  /* Media queries for responsiveness */
   @media (max-width: 768px) {
     .container {
       padding: 10px;
@@ -75,35 +70,7 @@
     }
   
     .searchInput {
-      width: 80%; /* Adjusted width for smaller screens */
+      width: 80%; 
     }
-  }
-  
-
-
-
-  /* covid.module.css */
-
-/* Legend styles */
-.legend {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-  }
-  
-  .legendItem {
-    display: flex;
-    align-items: center;
-    margin-right: 20px;
-  }
-  
-  .legendSquare {
-    width: 20px;
-    height: 20px;
-    margin-right: 5px;
-  }
-  
-  .legendItem span {
-    font-size: 14px;
   }
   

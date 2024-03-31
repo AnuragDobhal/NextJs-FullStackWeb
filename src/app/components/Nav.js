@@ -48,11 +48,11 @@ const Nav = () => {
                                   onClick={() => setOpenMenu(false)}
                                   href="/movie">Movie</Link>
                         </li>
-                        <li className={styles.navbarItem}>
+                        {/* <li className={styles.navbarItem}>
                             <Link className={styles.navbarLink} href="/about"
                                   onClick={() => setOpenMenu(false)}
                             >About</Link>
-                        </li>
+                        </li> */}
                      
                         <li className={styles.navbarItem}>
                             <Link className={styles.navbarLink}

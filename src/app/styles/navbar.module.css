@@ -34,7 +34,7 @@
 
 .navbarList a {
     font-weight: bold;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     color: #161617;
     padding: 1rem;
     margin: 0;
@@ -149,11 +149,11 @@
     }
 
     .navbarList .navbarItem {
-        font-size: 4.2rem;
+        font-size: 4rem;
     }
 
     .navbarList .navbarItem a {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
     }
 
     .navbarList .navbarItem a:hover {
