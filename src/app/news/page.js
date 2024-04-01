@@ -4,7 +4,7 @@ import styles from "@/app/styles/news.module.css";
 async function productlistserver() {
   await new Promise((resolve) => setTimeout(resolve, 2000));
   let data = await fetch(
-    "https://newsapi.org/v2/everything?q=tesla&from=2024-02-29&sortBy=publishedAt&apiKey=6339e4a4e79e469498666f9fba226734"
+    "https://newsapi.org/v2/everything?q=tesla&from=2024-03-01&sortBy=publishedAt&apiKey=6339e4a4e79e469498666f9fba226734"
   );
   data = await data.json();
   return data.articles;
