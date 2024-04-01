@@ -2,7 +2,6 @@ import React from "react";
 import Herosection from "@/app/components/Herosection";
 import MovieCard from "@/app/components/MovieCard";
 import styles from "@/app/styles/common.module.css";
-// import SearchBar from "../components/Searchbar";
 
 const Movie = async () => {
   await new Promise((resolve) => setTimeout(resolve, 2000));
@@ -27,7 +26,6 @@ const Movie = async () => {
        <Herosection title={"OUR STORY"} imageUrl ={"/about1.svg"} />
       <section className={styles.movieSection}>
         <div className={styles.container}>
-          {/* <SearchBar /> */}
           <h1>
             Series <span> & </span> Movie
           </h1>

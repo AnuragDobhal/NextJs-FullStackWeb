@@ -12,8 +12,7 @@ const SearchBar = () => {
 
     const fetchRelatedContent = async () => {
       try {
-        const response = await fetch(
-          `RAPID_KEY="https://netflix54.p.rapidapi.com/search/?query==${searchQuery}`
+        const response = await fetch("https://netflix54.p.rapidapi.com/search/?query==${searchQuery}"
         );
         if (response.ok) {
           const data = await response.json();
