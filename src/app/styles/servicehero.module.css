@@ -1,6 +1,8 @@
-.wrapper{
+/* Common styles */
+.wrapper {
     margin-top: 30px;
 }
+
 .heading {
     text-align: center;
     font-size: 3.8rem;
@@ -26,12 +28,11 @@
     width: 10%;
 }
 
-.span{
+.span {
     color: #b01033;
 }
 
 /* Visit button styles */
-
 .visit {
     background-color: #e6113f;
     text-decoration: none;
@@ -51,7 +52,6 @@
 }
 
 /* Hero section styles */
-
 .hero {
     background: url('https://images.unsplash.com/photo-1518176258769-f227c798150e') center;
     background-size: cover;
@@ -59,9 +59,9 @@
     border-radius: 20px;
     text-align: center;
     position: relative;
-    overflow: hidden; 
-    margin-left: 10px;
-    margin-right: 10px;
+    overflow: hidden;
+    margin-left: 80px;
+    margin-right: 80px;
 }
 
 .hero::before {
@@ -77,9 +77,10 @@
 
 .hero > * {
     color: white;
-    position: relative; 
+    position: relative;
     z-index: 1;
 }
+
 .hero > h1 {
     font-size: 3.5rem;
     margin-bottom: 1rem;
@@ -107,9 +108,10 @@
 }
 
 /* Breweries section styles */
-
 .breweries {
-    padding: 2rem;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-top: 60px;
 }
 
 .breweries > ul {
@@ -168,4 +170,45 @@
 .breweries > ul > li > a {
     padding: 0.5rem 1rem;
     margin: 0.5rem;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .hero {
+        /* padding: 8rem 1rem; */
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .breweries {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .heading {
+        font-size: 2.8rem;
+    }
+
+    .hero {
+        padding: 6rem 1rem;
+    }
+
+    .breweries {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .breweries > ul {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .breweries > ul > li > figure > figcaption > h3 {
+        font-size: 1rem;
+    }
+
+    .breweries > ul > li > p {
+        font-size: 0.9rem;
+    }
 }

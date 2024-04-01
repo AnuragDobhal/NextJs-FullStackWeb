@@ -22,7 +22,8 @@ const AboutUs = () => {
           explore the fascinating realms of software development, delve into the
           intricacies of coding, and inspire each other to reach new heights of
           innovation. Together, let's unlock the endless possibilities of
-          technology and embark on a journey of continuous learning and growth.
+          technology and embark on a journey of continuous learning and growth.we believe in the power of
+          community and collaboration.
           Welcome to Wikitech.io – where curiosity meets expertise!
         </p>
       </div>
