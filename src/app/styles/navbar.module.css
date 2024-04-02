@@ -2,7 +2,7 @@
 
 .main_header {
     padding: 1rem 5vw; 
-    height: 10vh;
+    height: 12vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -19,6 +19,7 @@
     height: auto;
     display: block;
     margin: 0 auto;
+    transform: scale(1.1);
 }
 
 .navbarList {

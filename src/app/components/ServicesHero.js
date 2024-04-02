@@ -7,7 +7,7 @@ import CenteredTabs from "./tabs";
 const ServiceHero = () => {
   return (
     <main className={styles.wrapper}>
-      <h2 className={styles.heading}>Unlock Solutions</h2>
+      <h2 className={styles.heading}>Unlock Trailblazing Solutions</h2>
       <section className={styles.hero}>
         <h1>Unlock Tailored Solutions</h1>
         <article>

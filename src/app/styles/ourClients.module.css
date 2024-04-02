@@ -41,14 +41,15 @@
     gap: 20px; 
     justify-content: center; 
     align-items: center; 
-    padding-left: 5%;
-    padding-right: 5%; 
-    margin-bottom: 5rem;;
+    padding: 0.9%;
+    margin-bottom: 5rem;
+    height: 100%;
+    /* background-color: #ff0037; */
+    background: linear-gradient(to bottom, rgb(249, 249, 249) 0%, rgba(249,249,249,1) 50%, rgba(255,255,255,1) 100%);
   }
   
 
   .item {
-    background-color: rgb(255, 255, 255);
     padding: 20px;
     font-size: 16px; 
     text-align: center;

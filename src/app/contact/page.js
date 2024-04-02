@@ -17,9 +17,8 @@ const Contact = () => {
 
           <ContactForm />
         </section>
-      </div>
 
-      <iframe
+        <iframe
         src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Dehradun, Cynoteck&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
         width={100}
         height={450}
@@ -28,7 +27,11 @@ const Contact = () => {
         loading="lazy"
         className={styles.mapping}
         referrerPolicy="no-referrer-when-downgrade"
-      ></iframe>
+      >  
+      </iframe>
+      </div>
+
+ 
     </>
   );
 };
