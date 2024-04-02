@@ -9,12 +9,13 @@
   
   .head {
     margin-top: 3.2rem;
-    font-size: 3.2rem;
+    font-size: 4rem;
     position: relative;
     cursor: pointer;
     transition: color 0.3s ease;
     text-align: center;
-    color: #333; /* Changed text color for better contrast */
+    color: #333; 
+    font-weight: 800;
   }
   
   .head::after {

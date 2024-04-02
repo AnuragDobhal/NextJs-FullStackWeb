@@ -1,12 +1,12 @@
 
 .heading {
     text-align: center;
-    font-size: 3.2rem;
+    font-size: 4rem;
     position: relative;
     cursor: pointer;
     transition: color 0.3s ease;
     margin-top: 10.2rem;
-
+    font-weight: 800;
     transition: color 0.3s ease;
   }
   
@@ -43,6 +43,7 @@
     align-items: center; 
     padding: 0.9%;
     margin-bottom: 5rem;
+    margin-top: 6rem;
     height: 100%;
     /* background-color: #ff0037; */
     background: linear-gradient(to bottom, rgb(249, 249, 249) 0%, rgba(249,249,249,1) 50%, rgba(255,255,255,1) 100%);

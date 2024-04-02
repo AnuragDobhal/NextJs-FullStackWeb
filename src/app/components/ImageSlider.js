@@ -1,9 +1,12 @@
-"use client"
+"use client";
 
-import React, { useState, useEffect } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
-import Image from 'next/image'; 
+import React, { useState, useEffect } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faChevronLeft,
+  faChevronRight,
+} from "@fortawesome/free-solid-svg-icons";
+import Image from "next/image";
 import styles from "@/app/styles/ImageSlider.module.css";
 
 const ImageSlider = ({ images }) => {
@@ -26,8 +29,8 @@ const ImageSlider = ({ images }) => {
       nextSlide();
     }, 3000); // Change slide every 3 seconds
 
-    return () => clearInterval(intervalId); 
-  }, [currentIndex]); // Restart interval 
+    return () => clearInterval(intervalId);
+  }, [currentIndex]); // Restart interval
 
   return (
     <div className={styles.slider}>
@@ -35,7 +38,13 @@ const ImageSlider = ({ images }) => {
         <FontAwesomeIcon icon={faChevronLeft} />
       </button>
       {/* Using the Image component */}
-      <Image src={`/${images[currentIndex]}`} alt="slide" className={styles.slideimg} width={500} height={500} />
+      <Image
+        src={`/${images[currentIndex]}`}
+        alt="slide"
+        className={styles.slideimg}
+        width={500}
+        height={500}
+      />
       <button onClick={nextSlide} className={styles.nextBtn}>
         <FontAwesomeIcon icon={faChevronRight} />
       </button>

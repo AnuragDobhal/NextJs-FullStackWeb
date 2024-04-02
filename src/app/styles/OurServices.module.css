@@ -9,10 +9,11 @@
 
 .heading {
   margin-top: 3.2rem;
-  font-size: 3.2rem;
+  font-size: 4rem;
   position: relative;
   display: inline-block;
   cursor: pointer;
+  font-weight: 800;
   transition: color 0.3s ease;
 }
 

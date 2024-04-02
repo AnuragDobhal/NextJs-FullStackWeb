@@ -26,13 +26,16 @@
     /* margin-bottom: 3.2rem; */
     margin-top: 3.2rem;
     color: #1d1d1d;
+    font-size: 4rem;
 }
 
 .movieSection span{
+    font-size: 4rem;
     text-align: center;
     /* margin-bottom: 3.2rem; */
     margin-top: 3.2rem;
     color: #e50914;
+    font-weight: 800;
 }
 .movie_title {
     margin: 3.2rem 0 3.2rem 0;

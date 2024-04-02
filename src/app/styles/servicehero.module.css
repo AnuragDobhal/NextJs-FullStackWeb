@@ -1,14 +1,15 @@
 /* Common styles */
 .wrapper {
-  margin-top: 70px;
+  margin-top: 100px;
 }
 
 .heading {
   text-align: center;
-  font-size: 3.8rem;
+  font-size: 4rem;
   position: relative;
   cursor: pointer;
   transition: color 0.3s ease;
+  font-weight: 800;
 }
 
 .heading::after {
@@ -63,7 +64,7 @@
   overflow: hidden;
   margin-left: 60px;
   margin-right: 60px;
-  margin-top: 50px;
+  margin-top: 100px;
 }
 
 .hero::before {
@@ -74,12 +75,7 @@
   width: 100%;
   height: 100%;
   clip-path: polygon(0 0, 100% 0, 100% 55%, 50% 100%, 0 55%);
-  background-color: rgba(
-    56,
-    5,
-    5,
-    0.5
-  ); /* Adjust the color and opacity as needed */
+  background-color: rgba(56,5,5, 0.5);
 }
 
 .hero > * {

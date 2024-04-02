@@ -7,13 +7,14 @@
     align-items: center;
   }
   
-  /* Heading styles */
+  
   .head {
     text-align: center;
     position: relative;
-    font-size: 2rem;
+    font-size: 4rem;
     margin-bottom: 20px;
     color: #333;
+    font-weight: 800;
   }
   
   .head::after {
