@@ -1,25 +1,16 @@
-
-
-
-
-
 "use client";
+
 import React, { useState, useEffect } from "react";
-import {
-  BarChart,
-  Bar,
-  XAxis,
-  YAxis,
-  Tooltip,
-  Legend,
-  LineChart,
-  Line,
-  PieChart,
-  Pie,
-  Cell,
-} from "recharts";
+import { BarChart,Bar,XAxis,YAxis,Tooltip,Legend,LineChart,Line,PieChart,Pie,Cell,} from "recharts";
 import TextField from "@material-ui/core/TextField";
 import covidStyles from "@/app/styles/covid.module.css";
+
+
+export default function ProductServer() {
+  const [covidData, setCovidData] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [chartWidth, setChartWidth] = useState(0);
+
 
 async function covidcaselistserver() {
   await new Promise((resolve) => setTimeout(resolve, 2000));
@@ -27,11 +18,6 @@ async function covidcaselistserver() {
   data = await data.json();
   return data;
 }
-
-export default function ProductServer() {
-  const [covidData, setCovidData] = useState([]);
-  const [searchTerm, setSearchTerm] = useState("");
-  const [chartWidth, setChartWidth] = useState(0);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -59,11 +45,12 @@ export default function ProductServer() {
     item.country.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
-  // Data for pie chart
+  // Data for pie chart 
+
   const pieChartData = [
     {
       name: "Cases",
-      value: filteredData.reduce((acc, curr) => acc + curr.cases, 0),
+      value: filteredData.reduce((acc, curr) => acc + curr.cases, 0), //two parameters accumulate and current
     },
     {
       name: "Deaths",
@@ -82,7 +69,6 @@ export default function ProductServer() {
       <h2 className={covidStyles.head}>
         COVID-19 <span> Cases </span>
       </h2>
-
       <div className={covidStyles.searchContainer}>
         <TextField
           label="Search by country..."
@@ -92,7 +78,7 @@ export default function ProductServer() {
         />
       </div>
       <div className={covidStyles.chartContainer}>
-        
+
         {/* Bar Chart */}
         <BarChart
           width={chartWidth}
@@ -103,11 +89,15 @@ export default function ProductServer() {
           <XAxis dataKey="country" />
           <YAxis />
           <Tooltip />
-          <Legend formatter={(value) => value.charAt(0).toUpperCase() + value.slice(1)} />
+          <Legend
+            formatter={(value) =>
+              value.charAt(0).toUpperCase() + value.slice(1)
+            }
+          />
           <Bar dataKey="cases" name="Cases" fill="#ff7802" />
           <Bar dataKey="deaths" name="Deaths" fill="#ff0037" />
           <Bar dataKey="recovered" name="Recovered" fill="#2b9309" />
-        </BarChart>
+        </BarChart> 
 
         {/* Line Chart */}
         <LineChart
@@ -119,10 +109,24 @@ export default function ProductServer() {
           <XAxis dataKey="country" />
           <YAxis />
           <Tooltip />
-          <Legend formatter={(value) => value.charAt(0).toUpperCase() + value.slice(1)} />
+          <Legend
+            formatter={(value) =>
+              value.charAt(0).toUpperCase() + value.slice(1)
+            }
+          />
           <Line type="monotone" dataKey="cases" name="Cases" stroke="#ff7802" />
-          <Line type="monotone" dataKey="deaths" name="Deaths" stroke="#ff0037" />
-          <Line type="monotone" dataKey="recovered" name="Recovered" stroke="#2b9309" />
+          <Line
+            type="monotone"
+            dataKey="deaths"
+            name="Deaths"
+            stroke="#ff0037"
+          />
+          <Line
+            type="monotone"
+            dataKey="recovered"
+            name="Recovered"
+            stroke="#2b9309"
+          />
         </LineChart>
 
         {/* Pie Chart */}
@@ -138,11 +142,18 @@ export default function ProductServer() {
             label
           >
             {pieChartData.map((entry, index) => (
-              <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+              <Cell
+                key={`cell-${index}`}
+                fill={COLORS[index % COLORS.length]}
+              />
             ))}
           </Pie>
           <Tooltip />
-          <Legend formatter={(value) => value.charAt(0).toUpperCase() + value.slice(1)} />
+          <Legend
+            formatter={(value) =>
+              value.charAt(0).toUpperCase() + value.slice(1)
+            }
+          />
         </PieChart>
       </div>
     </div>

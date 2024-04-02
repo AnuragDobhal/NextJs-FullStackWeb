@@ -18,7 +18,7 @@ export default function ServerComponent() {
   return (
     <div>
       {/* <h1>Data fetched on the server side:</h1> */}
-      <pre>{JSON.stringify(data, null, 2)}</pre>
+      {/* <pre>{JSON.stringify(data, null, 2)}</pre> */}
       <Covidcase data={data} />
     </div>
   );

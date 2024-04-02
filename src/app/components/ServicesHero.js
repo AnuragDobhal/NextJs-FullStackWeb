@@ -3,10 +3,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "@/app/styles/servicehero.module.css";
+import CenteredTabs from "./tabs";
 const ServiceHero = () => {
   return (
     <main className={styles.wrapper}>
-      <h2 className={styles.heading}>Explore</h2>
+      <h2 className={styles.heading}>Unlock Solutions</h2>
       <section className={styles.hero}>
         <h1>Unlock Tailored Solutions</h1>
         <article>
@@ -85,6 +86,8 @@ const ServiceHero = () => {
           </li>
         </ul>
       </section>
+
+      {/* <CenteredTabs/> */}
     </main>
   );
 };

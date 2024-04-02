@@ -6,11 +6,11 @@ const NotFound = () => {
         
         <section className={styles.container}>
             <div className={styles.error_page}>
-                <h1>404</h1>
-                <h2>Not Found</h2>
+                <h2>404</h2>
+                <h3>Not Found</h3>
                 <p>Could not find requested resource</p>
                 <Link href="/">
-                    <button>
+                    <button className={styles.notfoundbtn}>
                         Go to Home Page
                     </button>
                 </Link>
