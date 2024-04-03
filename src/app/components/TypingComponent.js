@@ -1,5 +1,4 @@
 "use client"
-
 import React, { useState, useRef, useEffect } from 'react';
 import styles from "@/app/styles/typing.module.css";
 
@@ -42,15 +41,38 @@ const TypingComponent = () => {
 
     const startDrawing = (e) => {
       const rect = canvas.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
+      let x, y;
+      if (e.type === 'mousedown') {
+        x = e.clientX - rect.left;
+        y = e.clientY - rect.top;
+      } else if (e.type === 'touchstart') {
+        x = e.touches[0].clientX - rect.left;
+        y = e.touches[0].clientY - rect.top;
+      }
 
       setIsDrawing(true);
       setPrevPosition({ x, y });
 
-      // Start drawing only when the mouse is clicked
+      // Start drawing only when the mouse or touch is pressed
       context.beginPath();
       context.moveTo(x, y);
+    };
+
+    const draw = (e) => {
+      if (!isDrawing) return;
+
+      const rect = canvas.getBoundingClientRect();
+      let x, y;
+      if (e.type === 'mousemove') {
+        x = e.clientX - rect.left;
+        y = e.clientY - rect.top;
+      } else if (e.type === 'touchmove') {
+        x = e.touches[0].clientX - rect.left;
+        y = e.touches[0].clientY - rect.top;
+      }
+
+      context.lineTo(x, y);
+      context.stroke();
     };
 
     const stopDrawing = () => {
@@ -58,65 +80,55 @@ const TypingComponent = () => {
     };
 
     canvas.addEventListener('mousedown', startDrawing);
+    canvas.addEventListener('touchstart', startDrawing);
+
+    canvas.addEventListener('mousemove', draw);
+    canvas.addEventListener('touchmove', draw);
+
     canvas.addEventListener('mouseup', stopDrawing);
+    canvas.addEventListener('touchend', stopDrawing);
 
     return () => {
       canvas.removeEventListener('mousedown', startDrawing);
-      canvas.removeEventListener('mouseup', stopDrawing);
-    };
-  }, []);
+      canvas.removeEventListener('touchstart', startDrawing);
 
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    const context = canvas.getContext('2d');
-
-    const draw = (e) => {
-      if (!isDrawing) return;
-
-      const rect = canvas.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-
-      context.lineTo(x, y);
-      context.stroke();
-    };
-
-    canvas.addEventListener('mousemove', draw);
-
-    return () => {
       canvas.removeEventListener('mousemove', draw);
+      canvas.removeEventListener('touchmove', draw);
+
+      canvas.removeEventListener('mouseup', stopDrawing);
+      canvas.removeEventListener('touchend', stopDrawing);
     };
   }, [isDrawing]);
 
   return (
     <div>
       <div className={styles.container}>
-      <textarea className={styles.textContainer}
-        value={text}
-        onChange={(e) => setText(e.target.value)}
-        rows={10}
-        cols={50}
-      />
-      <div className={styles.typingContainer}>
-        <button className={styles.typeWordBtn}>Typed Words: {text.trim().split(/\s+/).filter(word => word !== '').length}</button>
-        <button className={styles.numOfCharBtn}>Number of Characters: {text.length}</button>
-        <button className={styles.numOfLineBtn}>Number of Lines: {countLines(text)}</button>
-    </div>
+        <textarea className={styles.textContainer}
+          value={text}
+          onChange={(e) => setText(e.target.value)}
+          rows={10}
+          cols={50}
+        />
+        <div className={styles.typingContainer}>
+          <button className={styles.typeWordBtn}>Typed Words: {text.trim().split(/\s+/).filter(word => word !== '').length}</button>
+          <button className={styles.numOfCharBtn}>Number of Characters: {text.length}</button>
+          <button className={styles.numOfLineBtn}>Number of Lines: {countLines(text)}</button>
+        </div>
 
         {/* Canvas for drawing signature */}
         <div className={styles.canvasContainer}>
-            <h2 className={styles.signHeading}>Draw your Signature</h2>
-        <canvas className={styles.canvas}
-          ref={canvasRef}
-          width={300}
-          height={150}
-          style={{ border: '1px solid', cursor: 'crosshair' }}
-        />
-        <div className={styles.btnContainer}>
+          <h2 className={styles.signHeading}>Draw your Signature</h2>
+          <canvas className={styles.canvas}
+            ref={canvasRef}
+            width={300}
+            height={150}
+            style={{ border: '1px solid', cursor: 'crosshair' }}
+          />
+          <div className={styles.btnContainer}>
             <button className={styles.dwnldBtn} onClick={saveSignature}>Download Signature</button>
             <button className={styles.resetBtn} onClick={resetCanvas}>Reset Signature</button>
+          </div>
         </div>
-      </div>
       </div>
     </div>
   );
