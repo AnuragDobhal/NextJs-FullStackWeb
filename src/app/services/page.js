@@ -4,12 +4,13 @@ import React from "react";
 import ServiceHero from "../components/ServicesHero";
 import OurClients from "../components/OurClients";
 import ImageSlider from "../components/ImageSlider";
+// import TypingComponent from "../signature/page";
 
 
 const images = [
   'about.jpg',
   'banner.jpg',
-  'techbg.jpg'
+  'slide1.jpg'
 ];
 
 function Services() {
@@ -18,6 +19,7 @@ function Services() {
       <ImageSlider images={images}/>
       <ServiceHero />
       <AboutUs />
+      {/* <TypingComponent/> */}
       <OurClients />
     </div>
   );

@@ -20,7 +20,7 @@
   display: inline-block;
   cursor: pointer;
   transition: color 0.3s ease;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .container h2::after {
@@ -30,12 +30,13 @@
   bottom: -2px;
   width: 100%;
   height: 2px;
+  color: #00224D;
   background-color: transparent;
   transition: background-color 0.3s ease, width 0.3s ease-out;
 }
 
 .container h2:hover::after {
-  background-color: #e50f1a;
+  background-color: #FF204E;
   width: 110%;
 }
 
@@ -80,7 +81,7 @@
 
 .grid_card i {
   font-size: 3rem; 
-  color: #e50f1a;
+  color: #A0153E;
 }
 
 .grid_card i:hover {
@@ -101,7 +102,7 @@
 }
 
 .grid_card h2:hover {
-  color: #e50914;
+  color: #FF204E;
   transition: color 0.3s ease;
 }
 
@@ -116,7 +117,7 @@
 }
 
 .contact_section span {
-  color: #e50914;
+  color: #FF204E;
 }
 
 .contact_form {
@@ -164,11 +165,11 @@
 }
 
 .success_msg {
-  color: #a8e48a;
+  color: #66eb24;
 }
 
 .error_msg {
-  color: red;
+  color: FF204E;
 }
 
 

@@ -13,8 +13,8 @@
     position: relative;
     font-size: 4rem;
     margin-bottom: 20px;
-    color: #333;
-    font-weight: 800;
+    color: #00224D;
+    font-weight: 700;
   }
   
   .head::after {
@@ -26,7 +26,7 @@
     transform: translateX(-50%);
     width: 50%;
     height: 2px;
-    background-color: #ff0037; 
+    background-color: #FF204E; 
     transition: width 0.3s ease;
   }
   
@@ -42,7 +42,7 @@
   .searchInput {
     width: 300px; 
     padding: 10px;
-    border: 2px solid #ff0037;
+    border: 2px solid #FF204E;
     border-radius: 20px; 
     font-size: 1rem;
     outline: none;

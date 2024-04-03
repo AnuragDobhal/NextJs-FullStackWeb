@@ -45,7 +45,7 @@
 .hero_content h1 {
     text-transform: uppercase;
     font-size: 4.8rem;
-    color: #000;
+    color: #00224D;
 }
 
 .hero_content p {
@@ -70,7 +70,7 @@
 }
 
 .hero_content p:hover::after {
-    background-color: #b01033; 
+    background-color: #FF204E; 
     transform: scaleX(1); 
 }
 
@@ -100,7 +100,7 @@
 }
 
 .btn{
-    background-color: #b01033;
+    background-color: #A0153E;
 }
 
 .custom-shape-divider-bottom-1681647578 {

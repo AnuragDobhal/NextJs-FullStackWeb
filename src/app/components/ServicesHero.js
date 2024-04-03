@@ -24,40 +24,44 @@ const ServiceHero = () => {
           <li>
             <figure>
               <Image
-                src="/about.jpg"
+                src="/undraw1.png"
                 alt="Several hands holding beer glasses"
                 width={500}
                 height={500}
+                className={styles.img}
               />
               <figcaption>
-                <h3>Software Development</h3>
+                <h3>Draw & Download</h3>
               </figcaption>
             </figure>
             <p>
-              Made in the interiors of collapsing stars star stuff harvesting
-              star light venture billions upon billions Drake Equation brain is
-              the seed of intelligence?
+            you can effortlessly create and download your personalized signature.
+            With our intuitive interface, you can craft a signature that reflects your
+            style and personality with ease. Whether you're signing documents, emails, 
+            or digital artwork, our platform empowers you to make your mark with confidence.
             </p>
-            <Link className={styles.visit} href="#">
-              View Article
+            <Link className={styles.visit} href="/signature">
+              Signature
             </Link>
           </li>
           <li>
             <figure>
               <Image
-                src="/banner.jpg"
+                src="/undraw3.png"
                 alt="Several friends doing a toast"
                 width={500}
                 height={500}
+                className={styles.img}
               />
               <figcaption>
                 <h3>Salseforce/Consultancy</h3>
               </figcaption>
             </figure>
             <p>
-              Another world citizens of distant epochs from which we spring
-              descended from astronomers Orion's sword shores of the cosmic
-              ocean.
+            you can effortlessly create and download your personalized signature.
+            With our intuitive interface, you can craft a signature that reflects your
+            style and personality with ease. Whether you're signing documents, emails, 
+            or digital artwork, our platform empowers you to make your mark with confidence.
             </p>
             <Link className={styles.visit} href="#">
               View Article
@@ -66,19 +70,21 @@ const ServiceHero = () => {
           <li>
             <figure>
               <Image
-                src="/about.jpg"
+                src="/undraw4.png"
                 alt="Three different glasses of beer"
                 width={500}
                 height={500}
+                className={styles.img}
               />
               <figcaption>
                 <h3>Finiance Sloutions</h3>
               </figcaption>
             </figure>
             <p>
-              Galaxies the ash of stellar alchemy prime number science
-              inconspicuous motes of rock and gas brain is the seed of
-              intelligence.
+            you can effortlessly create and download your personalized signature.
+            With our intuitive interface, you can craft a signature that reflects your
+            style and personality with ease. Whether you're signing documents, emails, 
+            or digital artwork, our platform empowers you to make your mark with confidence.
             </p>
             <Link className={styles.visit} href="#">
               View Article

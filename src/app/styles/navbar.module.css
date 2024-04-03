@@ -36,7 +36,7 @@
 .navbarList a {
     font-weight: bold;
     font-size: 1.5rem;
-    color: #161617;
+    color: #00224D;
     padding: 1rem;
     margin: 0;
     position: relative;
@@ -58,11 +58,11 @@
 
 .navbarItem a:hover:before {
     width: 100%;
-    background-color: #e50914;
+    background-color: #FF204E;
 }
 
 .navbarList .navbarItem a:hover {
-    color: #e50914;
+    color: #FF204E;
 }
 
 /* Mobile Styles */
@@ -108,13 +108,13 @@
 .mobile-nav-icon,
 .close-outline {
     font-size: 3.2rem;
-    color: #161617;
+    color: #00224D;
     transition: color 0.3s ease, transform 0.3s ease; /* Added transform transition */
 }
 
 .mobile-nav-icon:hover,
 .close-outline:hover {
-    color: #e50914;
+    color: #FF204E;
     transform: scale(1.1) rotate(90deg); 
     animation-name: bounce;  
 }
@@ -158,7 +158,7 @@
     }
 
     .navbarList .navbarItem a:hover {
-        color: #e50914;
+        color: #FF204E;
     }
 
     .active .mobile-nav-icon {

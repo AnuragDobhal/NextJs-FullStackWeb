@@ -10,7 +10,7 @@ import ImageSlider from "./components/ImageSlider";
 // import { SliderData } from './components/SliderData';
 
 const images = [
-  'about.jpg',
+  'slide1.jpg',
   'banner.jpg',
   'techbg.jpg'
 ];

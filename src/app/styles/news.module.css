@@ -14,8 +14,8 @@
     cursor: pointer;
     transition: color 0.3s ease;
     text-align: center;
-    color: #333; 
-    font-weight: 800;
+    color: #00224D; 
+    font-weight: 700;
   }
   
   .head::after {
@@ -27,7 +27,7 @@
     transform: translateX(-50%);
     width: 0;
     height: 2px;
-    background-color: #ff0037;
+    background-color: #FF204E;
     transition: width 0.3s ease;
   }
   
@@ -35,7 +35,7 @@
     width: 100%;
   }
   .head span {
-    color: #ff0037; 
+    color: #FF204E; 
   }
   
   .card {

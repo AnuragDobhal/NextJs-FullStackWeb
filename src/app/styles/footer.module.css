@@ -1,5 +1,5 @@
 .footer {
-    background: #161617;
+    background: #161617; 
     width: 100%;
     margin: 6rem auto 0 auto;
     position: relative;
@@ -85,7 +85,7 @@
 }
 
 .link-boxes .box .link_name:hover {
-    color: #f61e1e;
+    color: #FF204E;
 }
 
 .link-boxes .box .link_name::before {
@@ -156,7 +156,7 @@
 
 .input-box input[type="button"]:hover {
     opacity: 1;
-    background: #f61e1e;
+    background: #FF204E;
     color: #fff;
 }
 

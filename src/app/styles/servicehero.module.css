@@ -9,7 +9,7 @@
   position: relative;
   cursor: pointer;
   transition: color 0.3s ease;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .heading::after {
@@ -21,7 +21,7 @@
   transform: translateX(-50%);
   width: 0;
   height: 2px;
-  background-color: #ff0037;
+  background-color: #FF204E;
   transition: width 0.3s ease;
 }
 
@@ -30,12 +30,12 @@
 }
 
 .span {
-  color: #b01033;
+  color: #FF204E;
 }
 
 /* Visit button styles */
 .visit {
-  background-color: #e6113f;
+  background-color: #FF204E;
   text-decoration: none;
   color: white;
   border-radius: 8px;
@@ -47,14 +47,14 @@
 }
 
 .visit:hover {
-  background-color: #b01033;
+  background-color: #A0153E;
   transform: translateY(-2px);
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Hero section styles */
 .hero {
-  background: url("https://images.unsplash.com/photo-1518176258769-f227c798150e")
+  background: url("/banner5.jpg")
     center;
   background-size: cover;
   padding: 10rem 2rem;
@@ -97,7 +97,7 @@
 
 .hero > article .visits {
   padding: 0.8rem 5rem;
-  background-color: #e6113f;
+  background-color: #FF204E;
   color: #ffffff;
   text-decoration: none;
   transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
@@ -105,7 +105,7 @@
 }
 
 .hero > article .visits:hover {
-  background-color: #b01033;
+  background-color: #A0153E;
   transform: translateY(-2px);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -145,20 +145,21 @@
   position: relative;
 }
 
-.breweries > ul > li > figure > img {
-  width: 100%;
-  border-radius: 0.5rem;
+.img{
+ object-fit: cover;
+ width: 100%;
+ height: auto;
 }
 
 .breweries > ul > li > figure > figcaption {
   position: absolute;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(78, 77, 77, 0.7);
   width: 100%;
 }
 
 .breweries > ul > li > figure > figcaption > h3 {
-  color: white;
+  color: rgb(255, 255, 255);
   padding: 0.75rem;
   font-size: 1.25rem;
 }

@@ -17,11 +17,11 @@
 .content h2 {
   font-size: 4rem; 
   margin-bottom: 10px;
-  color: #101010e8;
+  color: #00224D;
   position: relative;
   display: inline-block;
   transition: color 0.3s ease-in-out;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .content h2::after {
@@ -32,7 +32,7 @@
   width: 0;
   height: 2px;
   border-radius: 5px;
-  background-color: #e90606;
+  background-color: #FF204E;
   transition: width 0.5s ease;
 }
 
@@ -58,7 +58,7 @@
   max-width: 300px; 
   animation: fadeIn 1s forwards;
   clip-path: polygon(0 15%, 25% 0, 50% 15%, 75% 0, 100% 15%, 100% 100%, 0 100%);
-  border: 2px solid #fc0339; 
+  border: 2px solid #FF204E; 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
   padding: 20px; 
   background-color: #f8f8f8; 
