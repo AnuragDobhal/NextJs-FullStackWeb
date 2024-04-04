@@ -85,6 +85,10 @@
 }
 
 
+.activeLink{
+color: #FF204E;
+font-weight: bold;
+}
 /*not found page styling */
 
 .error_page {

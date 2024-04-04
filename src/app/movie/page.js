@@ -2,8 +2,10 @@ import React from "react";
 import Herosection from "@/app/components/Herosection";
 import MovieCard from "@/app/components/MovieCard";
 import styles from "@/app/styles/common.module.css";
+import Link from "next/link";
 
-const Movie = async () => {
+const Movie = async ({ searchParams }) => {
+  // Simulating delay
   await new Promise((resolve) => setTimeout(resolve, 2000));
 
   const url =
@@ -16,14 +18,38 @@ const Movie = async () => {
     },
   };
 
-  const res = await fetch(url, options);
+  const totalData = 177;
+  const dataPerPage = 8;
+  const totalpages = Math.ceil(totalData / dataPerPage);
+
+  let currentPage = 1;
+
+  if (Number(searchParams.page) >= 1) {
+    currentPage = Number(searchParams.page);
+  }
+
+  let offset = (currentPage - 1) * dataPerPage;
+
+  // Fetching data
+  const res = await fetch(
+    `https://netflix54.p.rapidapi.com/search/?query=stranger&offset=${offset}&limit_titles=${dataPerPage}&limit_suggestions=20&lang=en`,
+    options
+  );
   const data = await res.json();
   const main_data = data.titles;
   console.log(main_data.jawSummary);
 
+  // Generating page numbers
+  let pageNumbers = [];
+  for (let i = currentPage - 3; i <= currentPage + 3; i++) {
+    if (i > 0 && i <= totalpages) {
+      pageNumbers.push(i);
+    }
+  }
+
   return (
     <>
-       <Herosection title={"OUR STORY"} imageUrl ={"/about1.svg"} />
+      <Herosection title={"OUR STORY"} imageUrl={"/about1.svg"} />
       <section className={styles.movieSection}>
         <div className={styles.container}>
           <h1>
@@ -34,6 +60,33 @@ const Movie = async () => {
               return <MovieCard key={curElem.id} {...curElem} />;
             })}
           </div>
+        </div>
+
+        <div
+          className={styles.pageNum}
+          style={{ display: "flex", gap: "2rem", justifyContent: "center" }}
+        >
+          {currentPage - 1 >= 1 && (
+            <>
+              <Link href={`/movie?page=${currentPage - 1}`}>{"<<"}</Link>
+            </>
+          )}
+
+          {pageNumbers.map((page) => (
+            <Link
+              key={page}
+              href={`/movie?page=${page}`}
+              className={page === currentPage ? styles.activeLink : ""}
+            >
+              {page}
+            </Link>
+          ))}
+
+          {currentPage + 1 <= totalpages && (
+            <>
+              <Link href={`/movie?page=${currentPage + 1}`}>{">>"}</Link>
+            </>
+          )}
         </div>
       </section>
     </>

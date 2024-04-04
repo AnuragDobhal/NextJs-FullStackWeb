@@ -17,7 +17,7 @@ const TypingComponent = () => {
   // Function to handle saving the signature
   const saveSignature = () => {
     const canvas = canvasRef.current;
-    const url = canvas.toDataURL(); // Convert canvas content to data URL
+    const url = canvas.toDataURL();  // Convert canvas content to data URL
     const link = document.createElement('a');
     link.href = url;
     link.download = 'signature.png'; 
@@ -26,7 +26,7 @@ const TypingComponent = () => {
     document.body.removeChild(link);
   };
 
-  // Function to reset the canvas
+  // Function to reset the  canvas
   const resetCanvas = () => {
     const canvas = canvasRef.current;
     const context = canvas.getContext('2d');
@@ -37,12 +37,12 @@ const TypingComponent = () => {
     const canvas = canvasRef.current;
     const context = canvas.getContext('2d');
     context.strokeStyle = 'black';
-    context.lineWidth = 2;
+    context.lineWidth = 1;
 
     const startDrawing = (e) => {
-      const rect = canvas.getBoundingClientRect();
+      const rect = canvas.getBoundingClientRect(); //this method returns the size of an element
       let x, y;
-      if (e.type === 'mousedown') {
+      if (e.type === 'mousedown') {    //will check the event type is mouse click or touch
         x = e.clientX - rect.left;
         y = e.clientY - rect.top;
       } else if (e.type === 'touchstart') {

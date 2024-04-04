@@ -1,5 +1,4 @@
-"use client";
-
+"use client"
 import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -32,22 +31,42 @@ const ImageSlider = ({ images }) => {
     return () => clearInterval(intervalId);
   }, [currentIndex]); // Restart interval
 
+  const renderIndicators = () => {
+    return images.map((_, index) => (
+      <span
+        key={index}
+        className={`${styles.indicator} ${
+          index === currentIndex ? styles.active : ""
+        }`}
+        onClick={() => setCurrentIndex(index)}
+      />
+    ));
+  };
+
   return (
     <div className={styles.slider}>
       <button onClick={prevSlide} className={styles.prevBtn}>
         <FontAwesomeIcon icon={faChevronLeft} />
       </button>
-      {/* Using the Image component */}
-      <Image
-        src={`/${images[currentIndex]}`}
-        alt="slide"
-        className={styles.slideimg}
-        width={500}
-        height={500}
-      />
+      <div className={styles.slidesContainer}>
+        {images.map((image, index) => (
+          <Image
+            key={index}
+            src={`/${image}`}
+            alt="slide"
+            className={`${styles.slideimg} ${
+              index === currentIndex ? styles.active : ""
+            }`}
+            width={500}
+            height={500}
+          />
+        ))}
+        <div className={styles.indicators}>{renderIndicators()}</div>
+      </div>
       <button onClick={nextSlide} className={styles.nextBtn}>
         <FontAwesomeIcon icon={faChevronRight} />
       </button>
+      
     </div>
   );
 };
