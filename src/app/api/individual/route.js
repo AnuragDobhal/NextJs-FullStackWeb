@@ -8,7 +8,7 @@ export function GET(){
 }
 
 
-export async function POSt(request){
+export async function POST(request){
     let payload= await request.json
      console.log(payload.name)
 if(!payload.name||!payload.age||!payload.email||!payload.company||!payload.jobRole||!payload.id){
