@@ -4,6 +4,7 @@ import MovieCard from "@/app/components/MovieCard";
 import styles from "@/app/styles/common.module.css";
 import Link from "next/link";
 
+
 const Movie = async ({ searchParams }) => {
   await new Promise((resolve) => setTimeout(resolve, 2000));
 
@@ -47,15 +48,8 @@ const Movie = async ({ searchParams }) => {
   }
 
   return (
-  
-    <div>
-      <Herosection 
-        title={"LET'S GET UPDATED"}
-        imageUrl={"/about1.svg"}
-        para={
-          "Stay updated with the latest news in the world of cinema! From action-packed blockbusters to compelling documentaries, we've got you covered."}
-        btntag={"Explore News"}
-      />
+    <>
+      <Herosection title={"OUR STORY"} imageUrl={"/about1.svg"} />
       <section className={styles.movieSection}>
         <div className={styles.container}>
           <h1>
@@ -95,8 +89,7 @@ const Movie = async ({ searchParams }) => {
           )}
         </div>
       </section>
-      </div>
-  
+    </>
   );
 };
 

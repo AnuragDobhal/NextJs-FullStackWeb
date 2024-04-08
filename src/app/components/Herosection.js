@@ -12,17 +12,20 @@ const mulish = Mulish({
 })
 
 
-const AboutUsSection = ({title, imageUrl, btntag, para}) => {
+const AboutUsSection = ({title, imageUrl}) => {
     return (
         <main className={heroStyles.main_section}>
             <div className={styles.container}>
                 <div className={styles.grid_two_section}>
                     <div className={heroStyles.hero_content}>
                         <h1>{title}</h1>
-                        <p>{para}</p>
+                        <p> From award-winning dramas to blockbuster action movies, we&apos;ve got you covered. Browse
+                            our
+                            selection of the latest and greatest movies, and find your new favorite today.
+                        </p>
                         <Link href="/movie">
-                            <button className={heroStyles.explorebtn}>
-                                {btntag}
+                            <button className={mulish.className}>
+                                Explore Movies
                             </button>
                         </Link>
                     </div>
