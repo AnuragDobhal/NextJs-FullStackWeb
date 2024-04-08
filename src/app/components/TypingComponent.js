@@ -1,5 +1,4 @@
 "use client"
-
 import React, { useState, useRef, useEffect } from 'react';
 import styles from "@/app/styles/typing.module.css";
 
@@ -8,7 +7,6 @@ const TypingComponent = () => {
   const canvasRef = useRef(null);
   const [isDrawing, setIsDrawing] = useState(false);
   const [prevPosition, setPrevPosition] = useState({ x: 0, y: 0 });
-  const [disableScroll, setDisableScroll] = useState(false); // State variable to track scroll lock
 
   // Function to count lines in the text
   const countLines = (text) => {
@@ -28,7 +26,7 @@ const TypingComponent = () => {
     document.body.removeChild(link);
   };
 
-  // Function to reset the canvas
+  // Function to reset the  canvas
   const resetCanvas = () => {
     const canvas = canvasRef.current;
     const context = canvas.getContext('2d');
@@ -58,9 +56,6 @@ const TypingComponent = () => {
       // Start drawing only when the mouse or touch is pressed
       context.beginPath();
       context.moveTo(x, y);
-
-      // Lock scroll during drawing
-      setDisableScroll(true);
     };
 
     const draw = (e) => {
@@ -82,9 +77,6 @@ const TypingComponent = () => {
 
     const stopDrawing = () => {
       setIsDrawing(false);
-
-      // Unlock scroll after drawing is finished
-      setDisableScroll(false);
     };
 
     canvas.addEventListener('mousedown', startDrawing);
@@ -107,24 +99,6 @@ const TypingComponent = () => {
       canvas.removeEventListener('touchend', stopDrawing);
     };
   }, [isDrawing]);
-
-  useEffect(() => {
-    // Function to disable scrolling
-    const disableScrollEvent = (e) => {
-      if (disableScroll) {
-        e.preventDefault();
-      }
-    };
-
-    // Add event listener for scroll
-    window.addEventListener('scroll', disableScrollEvent);
-
-    // Cleanup function
-    return () => {
-      // Remove event listener for scroll
-      window.removeEventListener('scroll', disableScrollEvent);
-    };
-  }, [disableScroll]);
 
   return (
     <div>

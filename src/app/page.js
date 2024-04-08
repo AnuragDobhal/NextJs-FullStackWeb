@@ -21,6 +21,8 @@ const Page = () => {
       <Herosection
         title={"LET'S WATCH MOVIES"}
         imageUrl={"/home.svg"}
+        btntag={"Explore Movies"}
+        para={"From award-winning dramas to blockbuster action movies, we've got you covered. Browse our selection of the latest and greatest movies, and find your new favorite today."}
         />
       <ServicesSection/>
       <ImageSlider images={images}/>

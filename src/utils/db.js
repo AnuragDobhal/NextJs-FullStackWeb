@@ -113,4 +113,12 @@ export const individuals = [
     jobRole: "Ui Developer",
     id: 140,
   },
+  {
+    name: "sammi",
+    age: 28,
+    email: "sammi.cynoteck@gmail.com",
+    company: "Cynoteck",
+    jobRole: "Salesforce Developer",
+    id: 150,
+  },
 ];
