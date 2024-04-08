@@ -1,3 +1,4 @@
+"use client"
 import styles from "@/app/styles/navbar.module.css"
 import Link from "next/link";
 import Image from "next/image";

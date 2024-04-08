@@ -44,23 +44,23 @@
 
 .hero_content h1 {
     text-transform: uppercase;
-    font-size: 4.8rem;
+    font-size: 4rem;
     color: #00224D;
 }
 
 .hero_content p {
-    margin: 2rem 0 4rem 0;
+    margin: 2rem 0 2rem 0;
     font-weight: 300;
     letter-spacing: .05rem;
     line-height: 1.65;
-    position: relative; 
+    position: relative;
 }
 
 .hero_content p::after {
     content: '';
     position: absolute;
     left: 0;
-    bottom: -5px;
+    bottom: -3px; 
     width: 100%;
     height: 1px;
     background-color: transparent; 
@@ -76,7 +76,7 @@
 
 .hero_image {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center; 
     align-items: center;
     opacity: 0; 
     transform: translateY(20px); 
@@ -99,9 +99,23 @@
     height: auto;
 }
 
-.btn{
-    background-color: #A0153E;
+
+.explorebtn {
+    background-color: #d60d25;
+    color: white;
+    border: none;
+    padding: 12px 24px; 
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1.2rem; 
+    
 }
+
+.explorebtn:hover {
+    background-color: #ff0037;
+}
+
 
 .custom-shape-divider-bottom-1681647578 {
     position: absolute;
@@ -130,10 +144,26 @@
 
     .hero_image {
         justify-content: center;
-        order: 0;
+        order: 0;    
+        align-items: center;
     }
 
     .hero_image img {
         width: 40%;
     }
+
+    .explorebtn {
+        padding: 10px 20px; 
+        font-size: 1.2rem; 
+    }
+
+    .hero_content p {
+        margin-bottom: 1.5rem; 
+    }
+    
+    .hero_content p::after {
+        bottom: -2px; 
+    }
 }
+
+

@@ -86,8 +86,14 @@
   height: 80px;
 }
 
+.iconContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
 .icon {
-  font-size: 4rem;
+  font-size: 3rem;
   color: #FF204E;
 }
 

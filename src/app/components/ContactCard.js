@@ -1,3 +1,4 @@
+"use client"
 import  styles from "@/app/contact/contact.module.css"
 import { MdEmail, MdVoiceChat, MdForum } from "react-icons/md";
 import Link from "next/link";
@@ -8,7 +9,12 @@ const ContactCard = () => {
             <div className={styles.container}>
                 <div className={styles.grid}>
                     <div className={styles.grid_card}>
-                        <i> <MdEmail /> </i>
+
+                    <div className={styles.iconContainer}>
+         v   <MdEmail className={styles.icon} />
+          </div>
+
+
                         <h2>Email</h2>
                         <p>Monday to Friday Expected </p>
                         <p className={styles.last_para}>response time: 72 hours </p>
@@ -16,7 +22,9 @@ const ContactCard = () => {
                     </div>
 
                     <div className={styles.grid_card}>
-                        <i> <MdVoiceChat /> </i>
+                    <div className={styles.iconContainer}>
+            <MdVoiceChat className={styles.icon} />
+          </div>
                         <h2>Live Chat</h2>
                         <p>Weekdays: 9 AM — 6 PM ET</p>
                         <p className={styles.last_para}>Weekends: 9 AM — 5 PM ET </p>
@@ -24,7 +32,9 @@ const ContactCard = () => {
                     </div>
 
                     <div className={styles.grid_card}>
-                        <i> <MdForum /> </i>
+                    <div className={styles.iconContainer}>
+            <MdForum className={styles.icon} />
+          </div>
                         <h2>Community Forum</h2>
                         <p>Monday to Friday Expected </p>
                         <p className={styles.last_para}>response time: 72 hours </p>

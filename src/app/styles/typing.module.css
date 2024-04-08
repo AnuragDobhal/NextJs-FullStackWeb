@@ -1,4 +1,4 @@
-/* Styles for the container */
+
 .container {
   /* display: flex;
     flex-direction: column;
@@ -10,13 +10,12 @@
   background-position: center;
 }
 
-/* Styles for the textarea */
 .textContainer {
   margin-top: 100px;
   margin-left: 5%;
   margin-right: 5%;
   width: 90%;
-  height: 200px; /* You can adjust the height as needed */
+  height: 200px; 
   padding: 10px;
   font-size: 16px;
   border: 2px solid #ccc;
@@ -28,7 +27,7 @@
   box-shadow: 20px 20px 60px #d7d7d7, -20px -20px 60px #ffffff;
 }
 
-/* Styles for the buttons container */
+
 .typingContainer {
   display: flex;
   flex-wrap: wrap;

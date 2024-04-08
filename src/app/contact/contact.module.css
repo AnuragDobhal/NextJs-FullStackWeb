@@ -79,8 +79,20 @@
   margin-bottom: 2rem; 
 }
 
-.grid_card i {
+/* .grid_card i {
   font-size: 3rem; 
+  color: #FF204E;
+} */
+
+
+.iconContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.icon {
+  font-size: 3rem;
   color: #FF204E;
 }
 
@@ -193,5 +205,8 @@
     grid-template-columns: 1fr;
     gap: 5rem;
     margin: 6rem auto;
+  }
+  .icon {
+    font-size: 3rem;
   }
 }

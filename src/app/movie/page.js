@@ -4,8 +4,8 @@ import MovieCard from "@/app/components/MovieCard";
 import styles from "@/app/styles/common.module.css";
 import Link from "next/link";
 
+
 const Movie = async ({ searchParams }) => {
-  // Simulating delay
   await new Promise((resolve) => setTimeout(resolve, 2000));
 
   const url =

@@ -107,9 +107,9 @@
 
 .mobile-nav-icon,
 .close-outline {
-    font-size: 3.2rem;
+    font-size: 2.2rem;
     color: #00224D;
-    transition: color 0.3s ease, transform 0.3s ease; /* Added transform transition */
+    transition: color 0.3s ease, transform 0.3s ease; 
 }
 
 .mobile-nav-icon:hover,
@@ -131,7 +131,7 @@
     }
 }
     .navbarList {
-        width: 50vw;
+        width: 50%;
         height: 100%;
         position: absolute;
         top: 0;
@@ -142,11 +142,11 @@
         align-content: center;
         flex-direction: column;
         text-align: center;
-        transform: translateX(100%);
+        /* transform: translateX(100%); */
         visibility: hidden;
         opacity: 0;
         transition: transform 0.3s ease, visibility 0s linear 0.3s, opacity 0.3s ease;
-        border-radius: 100px;
+        border-radius: 50px;
     }
 
     .navbarList .navbarItem {

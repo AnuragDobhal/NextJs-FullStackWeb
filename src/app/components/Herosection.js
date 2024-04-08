@@ -1,3 +1,4 @@
+"use client"
 import heroStyles from "@/app/styles/herosection.module.css"
 import styles from "@/app/styles/common.module.css"
 import Image from "next/image";
@@ -23,7 +24,7 @@ const AboutUsSection = ({title, imageUrl}) => {
                             selection of the latest and greatest movies, and find your new favorite today.
                         </p>
                         <Link href="/movie">
-                            <button className={mulish.className}>
+                            <button className={heroStyles.explorebtn}>
                                 Explore Movies
                             </button>
                         </Link>
