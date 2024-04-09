@@ -20,7 +20,7 @@ const AboutUsSection = ({title, imageUrl,para, btnTag}) => {
                     <div className={heroStyles.hero_content}>
                         <h1>{title}</h1>
                         <p>{para}</p>
-                        <Link href="/movie">
+                        <Link href="/movie">n
                             <button className={heroStyles.explorebtn}>
                                 {btnTag}
                             </button>
