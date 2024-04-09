@@ -49,7 +49,11 @@ const Movie = async ({ searchParams }) => {
 
   return (
     <>
-      <Herosection title={"OUR STORY"} imageUrl={"/about1.svg"} />
+      <Herosection title={"LET'S GET UPDATED"} imageUrl={"/about1.svg"} 
+      para={"From breaking news updates to in-depth investigative reports, we've got you covered. Explore our curated selection of the most recent and impactful stories."}
+      btnTag={"Explore News"}
+
+      />
       <section className={styles.movieSection}>
         <div className={styles.container}>
           <h1>
