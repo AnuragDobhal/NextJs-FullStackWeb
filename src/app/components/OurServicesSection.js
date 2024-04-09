@@ -1,6 +1,7 @@
 "use client";
 
 import styles from "@/app/styles/OurServices.module.css";
+import Link from "next/link";
 import { FaMobileAlt, FaDesktop } from "react-icons/fa";
 import { IoCloudDoneOutline } from "react-icons/io5";
 
@@ -19,7 +20,9 @@ const ServicesSection = () => {
             customers with the best Android, iOS, Hybrid, and Flutter mobile
             development solutions.
           </p>
+          <Link href="https://cynoteck.com/mobile-application-development/" passHref>
           <button className={styles.learnMoreButton}>Learn More</button>
+          </Link>
         </div>
         <div className={styles.card}>
           <div className={styles.iconContainer}>
@@ -31,7 +34,9 @@ const ServicesSection = () => {
             develop, manage, and better maintain your web material at a
             reasonable cost.
           </p>
-          <button className={styles.learnMoreButton}>Learn More</button>
+          <Link href="https://cynoteck.com/web-application-development/" passHref>
+              <button className={styles.learnMoreButton}>Learn More</button>
+          </Link>
         </div>
         <div className={styles.card}>
           <div className={styles.iconContainer}>
@@ -42,7 +47,9 @@ const ServicesSection = () => {
             Teaming with an experienced Salesforce development agency like ours
             can help you unlock the full potential of Salesforce.
           </p>
+          <Link href="https://chat.openai.com/c/4ac90cde-43f9-47b4-91b1-7be98f2e455b" passHref>
           <button className={styles.learnMoreButton}>Learn More</button>
+          </Link>
         </div>
       </div>
     </div>

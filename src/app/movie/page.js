@@ -52,7 +52,6 @@ const Movie = async ({ searchParams }) => {
       <Herosection title={"LET'S GET UPDATED"} imageUrl={"/about1.svg"} 
       para={"From breaking news updates to in-depth investigative reports, we've got you covered. Explore our curated selection of the most recent and impactful stories."}
       btnTag={"Explore News"}
-
       />
       <section className={styles.movieSection}>
         <div className={styles.container}>
@@ -65,7 +64,7 @@ const Movie = async ({ searchParams }) => {
             })}
           </div>
         </div>
-
+        
         <div
           className={styles.pageNum}
           style={{ display: "flex", gap: "2rem", justifyContent: "center" }}

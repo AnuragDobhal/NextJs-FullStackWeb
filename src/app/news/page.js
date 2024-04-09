@@ -48,4 +48,4 @@ const News = async () => {
   );
 };
 
-export default News;
+export default News; 
