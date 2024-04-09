@@ -1,5 +1,8 @@
 import React from "react";
+import Link from "next/link";
 import styles from "@/app/styles/news.module.css";
+
+
 
 const News = async () => {
   await new Promise((resolve) => setTimeout(resolve, 2000));
