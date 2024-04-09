@@ -92,7 +92,6 @@ const ServiceHero = () => {
           </li>
         </ul>
       </section>
-
       {/* <CenteredTabs/> */}
     </main>
   );
