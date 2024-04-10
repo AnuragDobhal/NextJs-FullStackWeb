@@ -14,8 +14,8 @@ const ServiceHero = () => {
           <p>
           "Unlock unparalleled solutions for your business challenges. Reach out to us today and elevate your business to new heights."
           </p>
-          <Link className={styles.visits} href="/movie">
-            Explore Movies
+          <Link className={styles.visits} href="/news">
+            Explore News
           </Link>
         </article>
       </section>

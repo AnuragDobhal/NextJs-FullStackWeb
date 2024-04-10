@@ -40,7 +40,7 @@ const Nav = () => {
               </Link>
             </li>
 
-            <li className={styles.navbarItem}>
+            {/* <li className={styles.navbarItem}>
               <Link
                 className={styles.navbarLink}
                 onClick={() => setOpenMenu(false)}
@@ -48,7 +48,7 @@ const Nav = () => {
               >
                 News
               </Link>
-            </li>
+            </li> */}
             <li className={styles.navbarItem}>
               <Link
                 className={styles.navbarLink}
@@ -66,6 +66,16 @@ const Nav = () => {
                 href="/services"
               >
                 Services
+              </Link>
+            </li>
+
+            <li className={styles.navbarItem}>
+              <Link
+                className={styles.navbarLink}
+                onClick={() => setOpenMenu(false)}
+                href="/shop"
+              >
+                TrendTribes
               </Link>
             </li>
             <li className={styles.navbarItem}>

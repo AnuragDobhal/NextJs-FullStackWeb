@@ -14,7 +14,7 @@ export default function LabTabs() {
   const [value, setValue] = React.useState('1');
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
-
+   
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };

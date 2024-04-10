@@ -12,7 +12,8 @@ const mulish = Mulish({
 })
 
 
-const AboutUsSection = ({title, imageUrl,para, btnTag}) => {
+const HeroSection = ({title, imageUrl,para, btnTag}) => {
+    
     return (
         <main className={heroStyles.main_section}>
             <div className={styles.container}>
@@ -44,4 +45,4 @@ const AboutUsSection = ({title, imageUrl,para, btnTag}) => {
     );
 };
 
-export default AboutUsSection;
+export default HeroSection;
