@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "@/app/styles/servicehero.module.css";
-import CenteredTabs from "./tabs";
+// import CenteredTabs from "./tabs";
 const ServiceHero = () => {
   return (
     <main className={styles.wrapper}>

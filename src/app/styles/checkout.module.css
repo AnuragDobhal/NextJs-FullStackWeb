@@ -1,0 +1,95 @@
+.CheckoutContainer {
+  background-image: url('/bgcheckout.jpg');
+  background-size: cover; 
+  background-position: center;
+  min-height: 100vh; 
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  background-color: rgba(255, 255, 255, 0.5); 
+}
+
+.paymentForm {
+  max-width: 600px;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.8); 
+}
+  
+  .CheckoutHead {
+    margin-top: 2rem;
+    font-size: 2.5rem; 
+    color: #00224d;
+    font-weight: 700;
+  }
+  
+  .inputField {
+    margin-bottom: 20px;
+  }
+  
+  .label {
+    margin-bottom: 8px; 
+    font-size: 14px; 
+  }
+  
+  .input {
+    width: 100%;
+    padding: 12px; 
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .input:focus {
+    outline: none;
+    border-color: #FF204E;
+  }
+  
+  .successMsg, .errorMsg {
+    margin-top: 8px; 
+  }
+  
+  .successMsg {
+    color: #28a745;
+  }
+  
+  .errorMsg {
+    color: #dc3545;
+  }
+  
+  .submitButton {
+    padding: 14px 28px; 
+    font-size: 16px;
+    background-color: #FF204E;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-items: center;
+    display: flex; 
+  }
+  
+  .submitButton:hover {
+    background-color: #cb1439;
+    color: rgb(255, 255, 255);
+  }
+  
+  @media screen and (max-width: 768px) {
+    .paymentForm {
+      padding: 20px;
+    }
+  
+    .input {
+      padding: 10px; 
+      font-size: 14px;
+    }
+  
+    .submitButton {
+      padding: 12px 24px;
+      font-size: 14px; 
+    }
+  }
+  

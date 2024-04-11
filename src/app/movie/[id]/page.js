@@ -14,8 +14,6 @@ const Page = async ({ params }) => {
     },
   };
 
-
-
   const res = await fetch(url, options);
   const data = await res.json();
   const main_data = data[0].details;

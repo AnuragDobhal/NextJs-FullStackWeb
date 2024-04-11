@@ -1,7 +1,87 @@
+.categoryHeading {
+  margin-top: 3.2rem;
+  font-size: 4rem;
+  position: relative;
+  transition: color 0.3s ease;
+  text-align: center;
+  color: #00224D; 
+  font-weight: 700;
+}
+
+.categoryHeading span {
+  position: relative; 
+}
+
+.categoryHeading span::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px; 
+  width: 100%; 
+  height: 2px; 
+  background-color: #FF204E; 
+  transition: width 0.3s ease;
+  clip-path: polygon(0% 0%, 100% 0%, 85% 100%, 15% 100%); 
+}
+
+.categoryHeading span:hover::after {
+  width: 0;
+}
+
+
+
+.categoryButtons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 40px;
+}
+
+.categoryButton {
+  padding: 12px 24px;
+  background-color: #A0153E;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center; 
+  flex: 1;
+  max-width: 200px; /* Limit maximum width of each button */
+}
+
+.categoryButton:hover {
+  background-color: #FF204E;
+  transform: scale(1.05);
+}
+
+/* Media query for responsiveness */
+@media screen and (max-width: 768px) {
+  .categoryButton {
+    flex: 1 0 100%; /* Each button takes full width on smaller screens */
+    max-width: none; /* Remove maximum width */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
 .container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-top: 100px;
 }
 
 .item {
@@ -97,4 +177,104 @@
 
 .imgContainer img:hover {
   transform: scale(1.05); 
+}
+
+/* shoppingComponent css */
+
+.wrapper {
+  margin-top: 100px;
+}
+
+.heading {
+  text-align: center;
+  font-size: 4rem;
+  position: relative;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.heading::after {
+  content: "";
+  display: inline;
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: #FF204E;
+  transition: width 0.3s ease;
+}
+
+.heading:hover::after {
+  width: 30%;
+}
+
+.hero {
+  background: url("/banner5.jpg") center/cover;
+  padding: 10rem 2rem;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  margin: 100px 60px;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(0 0, 100% 0, 100% 55%, 50% 100%, 0 55%);
+  background-color: rgba(56, 5, 5, 0.5);
+}
+
+.hero > * {
+  color: white;
+  position: relative;
+  z-index: 1;
+}
+
+.hero > h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero > article > p {
+  font-size: 1.25rem;
+  font-weight: 300;
+  margin-bottom: 3.5rem;
+}
+
+.hero > article .visits {
+  padding: 0.8rem 5rem;
+  background-color: #FF204E;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.hero > article .visits:hover {
+  background-color: #A0153E;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .hero {
+    margin: 100px 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .heading {
+    font-size: 2.8rem;
+  }
+
+  .hero {
+    padding: 6rem 1rem;
+  }
 }
