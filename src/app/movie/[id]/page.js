@@ -18,7 +18,6 @@ const Page = async ({ params }) => {
   const data = await res.json();
   const main_data = data[0].details;
 
-  
   return (
     <div className={styles.container}>
       <h2 className={styles.movie_title}>
@@ -36,7 +35,9 @@ const Page = async ({ params }) => {
         </div>
         <div>
           <h1>{main_data.title}</h1>
+          <h2>{main_data.releaseYear}</h2>
           <p>{main_data.synopsis}</p>
+          <p>{main_data.synopsisRegular}</p>
         </div>
       </div>
     </div>

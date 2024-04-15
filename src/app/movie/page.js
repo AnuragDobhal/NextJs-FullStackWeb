@@ -38,6 +38,7 @@ const Movie = async ({ searchParams }) => {
   const data = await res.json();
   const main_data = data.titles;
   console.log(main_data.jawSummary);
+  console.log(main_data);
 
   // Generating page numbers
   let pageNumbers = [];

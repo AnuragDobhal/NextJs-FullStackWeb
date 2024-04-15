@@ -28,8 +28,6 @@
   width: 0;
 }
 
-
-
 .categoryButtons {
   display: flex;
   justify-content: center;
@@ -61,21 +59,15 @@
 /* Media query for responsiveness */
 @media screen and (max-width: 768px) {
   .categoryButton {
-    flex: 1 0 100%; /* Each button takes full width on smaller screens */
-    max-width: none; /* Remove maximum width */
+    flex: 1 0 100%; 
+    max-width: none; 
   }
 }
 
-
-
-
-
-
-
-
-
-
-
+.rating {
+  color: #FF5733;
+  font-size: 1.2rem; 
+}
 
 .container {
   display: flex;
