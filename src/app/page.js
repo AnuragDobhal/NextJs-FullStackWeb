@@ -5,6 +5,7 @@ import ServicesSection from "./components/OurServicesSection";
 import OurClients from "./components/OurClients";
 import './globals.css'
 import ImageSlider from "./components/ImageSlider";
+// import TabSystem from "./components/tabs";
 
 // import Slider from "./components/GalleryFiles";
 // import { SliderData } from './components/SliderData';
@@ -26,7 +27,10 @@ const Page = () => {
         />
       <ServicesSection/>
       <ImageSlider images={images}/>
+{/* 
+      <TabSystem/> */}
       <OurClients/>
+
       <Contact/>
       {/* <BasicSpeedDial/> */}
     </>

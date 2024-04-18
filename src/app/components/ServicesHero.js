@@ -63,7 +63,7 @@ const ServiceHero = () => {
             style and personality with ease. Whether you're signing documents, emails, 
             or digital artwork, our platform empowers you to make your mark with confidence.
             </p>
-            <Link className={styles.visit} href="https://cynoteck.com/salesforce-professional-services/" passHref>
+            <Link className={styles.visit} href="gallery" passHref>
               View Article
             </Link>
           </li>

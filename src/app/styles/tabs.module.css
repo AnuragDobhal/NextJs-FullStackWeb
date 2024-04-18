@@ -1,0 +1,47 @@
+/* TabSystem.module.css */
+
+.tablink-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Reduce the margin for better spacing */
+  }
+  
+  .tablink {
+    background-color: #555;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 12px 16px; /* Adjust padding for better button size */
+    font-size: 16px; /* Reduce font size for better readability */
+    width: 150px; /* Set fixed width for consistent button size */
+    margin: 100px; /* Add some space between buttons */
+  }
+  
+  .tablink:hover {
+    background-color: #777;
+  }
+  
+  .tabcontent {
+    display: none;
+    padding: 20px;
+  }
+  
+  .tabcontent.active {
+    display: block;
+  }
+  
+  /* Additional Styles for Responsiveness */
+  @media (max-width: 768px) {
+    .tablink {
+      padding: 8px 12px; /* Adjust padding for smaller screens */
+      font-size: 14px; /* Reduce font size for smaller screens */
+      width: auto; /* Let the buttons adjust their width based on content */
+      margin: 0 5px; /* Reduce margin for smaller screens */
+    }
+  
+    .tabcontent {
+      padding: 10px;
+    }
+  }
+  
