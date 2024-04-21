@@ -1,4 +1,4 @@
-import { productData } from "@/utils/productDataApi";
+import { productData } from "@/lib/productDataApi";
 import { NextResponse } from "next/server";
 
 export function GET(req, content) {

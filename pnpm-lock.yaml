@@ -41,6 +41,9 @@ dependencies:
   bcrypt:
     specifier: ^5.1.1
     version: 5.1.1
+  bcryptjs:
+    specifier: ^2.4.3
+    version: 2.4.3
   chart.js:
     specifier: ^4.4.2
     version: 4.4.2
@@ -68,6 +71,9 @@ dependencies:
   next-images:
     specifier: ^1.8.5
     version: 1.8.5(webpack@5.91.0)
+  next-router:
+    specifier: ^1.3.6
+    version: 1.3.6(next@14.1.3)(react@18.2.0)
   next-themes:
     specifier: ^0.3.0
     version: 0.3.0(react-dom@18.2.0)(react@18.2.0)
@@ -1759,6 +1765,10 @@ packages:
     transitivePeerDependencies:
       - encoding
       - supports-color
+    dev: false
+
+  /bcryptjs@2.4.3:
+    resolution: {integrity: sha512-V/Hy/X9Vt7f3BbPJEi8BdVFMByHi+jNXrYkW3huaybV/kQ0KJg0Y6PkEMbn+zeT+i+SiKZ/HMqJGIIt4LZDqNQ==}
     dev: false
 
   /big-integer@1.6.52:
@@ -4318,8 +4328,8 @@ packages:
       next: 14.1.3(react-dom@18.2.0)(react@18.2.0)
       oauth: 0.9.15
       openid-client: 5.6.5
-      preact: 10.19.7
-      preact-render-to-string: 5.2.6(preact@10.19.7)
+      preact: 10.20.2
+      preact-render-to-string: 5.2.6(preact@10.20.2)
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
       uuid: 8.3.2
@@ -4337,6 +4347,17 @@ packages:
 
   /next-power-of-two@1.0.0:
     resolution: {integrity: sha512-+z6QY1SxkDk6CQJAeaIZKmcNubBCRP7J8DMQUBglz/sSkNsZoJ1kULjqk9skNPPplzs4i9PFhYrvNDdtQleF/A==}
+    dev: false
+
+  /next-router@1.3.6(next@14.1.3)(react@18.2.0):
+    resolution: {integrity: sha512-o7dGCVgKg1XWEjmf+31mabJoSKud4Y51s4Ymwzcn9upaNs5kciHil0TJPlDQOlZIZe1/om1obmUc59FuVtBXCQ==}
+    peerDependencies:
+      next: 2 - 5
+      react: ^15.4.2 || ^16
+    dependencies:
+      next: 14.1.3(react-dom@18.2.0)(react@18.2.0)
+      path-to-regexp: 2.4.0
+      react: 18.2.0
     dev: false
 
   /next-themes@0.3.0(react-dom@18.2.0)(react@18.2.0):
@@ -4608,6 +4629,10 @@ packages:
       minipass: 7.0.4
     dev: true
 
+  /path-to-regexp@2.4.0:
+    resolution: {integrity: sha512-G6zHoVqC6GGTQkZwF4lkuEyMbVOjoBKAEybQUypI1WTkqinCOrq2x6U2+phkJ1XsEMTy4LjtwPI7HW+NVrRR2w==}
+    dev: false
+
   /path-type@4.0.0:
     resolution: {integrity: sha512-gDKb8aZMDeD/tZWs9P6+q0J9Mwkdl6xMV8TjnGP3qJVJ06bdMgkbBlLU8IdfOsIsFz2BW1rNVT3XuNEl8zPAvw==}
     engines: {node: '>=8'}
@@ -4718,17 +4743,17 @@ packages:
       source-map-js: 1.2.0
     dev: true
 
-  /preact-render-to-string@5.2.6(preact@10.19.7):
+  /preact-render-to-string@5.2.6(preact@10.20.2):
     resolution: {integrity: sha512-JyhErpYOvBV1hEPwIxc/fHWXPfnEGdRKxc8gFdAZ7XV4tlzyzG847XAyEZqoDnynP88akM4eaHcSOzNcLWFguw==}
     peerDependencies:
       preact: '>=10'
     dependencies:
-      preact: 10.19.7
+      preact: 10.20.2
       pretty-format: 3.8.0
     dev: false
 
-  /preact@10.19.7:
-    resolution: {integrity: sha512-IJOW6cQN1fwfC17HfNOqUtAGyB8wAYshuC+jG1JiL/1+sC4yVyuA3IcF0N9vdodMJjW/lbuEF5qFsJqGNcbHbw==}
+  /preact@10.20.2:
+    resolution: {integrity: sha512-S1d1ernz3KQ+Y2awUxKakpfOg2CEmJmwOP+6igPx6dgr6pgDvenqYviyokWso2rhHvGtTlWWnJDa7RaPbQerTg==}
     dev: false
 
   /prelude-ls@1.2.1:

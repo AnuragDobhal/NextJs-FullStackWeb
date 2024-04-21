@@ -5,7 +5,7 @@ import ImageSlider from "../components/ImageSlider";
 import Categories from "./Categories";
 
 const images = ["ban4.png", "ban5.png", "ban7.png", "slide07.jpg"];
-
+ 
 async function productList() {
   let data = await fetch("http://localhost:3000/api/products");
   data = await data.json();

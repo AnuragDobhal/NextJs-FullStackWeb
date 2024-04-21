@@ -1,4 +1,4 @@
-import {individuals} from "@/utils/db"
+import {individuals} from "@/lib/db"
 import { NextResponse } from "next/server";
 
 

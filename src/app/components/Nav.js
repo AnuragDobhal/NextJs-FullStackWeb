@@ -87,6 +87,26 @@ const Nav = () => {
                 Covid Cases
               </Link>
             </li>
+
+            <li className={styles.navbarItem}>
+              <Link
+                className={styles.navbarLink}
+                onClick={() => setOpenMenu(false)}
+                href="/login"
+              >
+                Login
+              </Link>
+            </li>
+
+            <li className={styles.navbarItem}>
+              <Link
+                className={styles.navbarLink}
+                onClick={() => setOpenMenu(false)}
+                href="/register"
+              >
+                register
+              </Link>
+            </li>
           </ul>
 
           {/* //nav icon */}

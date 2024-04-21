@@ -1,4 +1,4 @@
-import dbConn from "@/utils/dbConn";
+import dbConn from "@/lib/mongodb";
 import Contact from "@/models/contact";
 import { NextResponse } from "next/server";
 
